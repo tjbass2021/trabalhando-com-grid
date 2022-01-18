@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+    
+        body{
+            display: grid;
+            background-color: black;
+            grid-gap: 1em;
+            grid-template-areas:
+            "cabeca cabeca cabeca"
+            "esquerdo principal direito"
+            "rodape rodape rodape";
+            grid-template-columns: 0.75fr 2fr 1fr;
+            grid-template-rows: 20vh 70vh 10vh; 
+            
+            
+        }
+        .cabeca{
+            grid-area: cabeca;
+            background-color: grey;
+        }
+        .principal{
+            padding: 10px;
+            grid-area: principal;
+            background-color: grey;
+            font-size: 90%;
+
+        }
+        .esquerdo{
+            grid-area: esquerdo;
+            background-color: grey;
+        }
+        .direito{
+            grid-area: direito;
+
+            background-color: grey;
+        }
+        .rodape{
+            grid-area: rodape;
+
+            background-color: grey;
+        }
+        @media (max-width: 764px){
+            body{
+            display: grid;
+            background-color: black;
+            grid-gap: 1em;
+            grid-template-areas:
+            "cabeca"
+            "esquerdo" 
+            "principal"
+            "direito"
+            "rodape";
+            grid-template-columns: 1fr;
+            grid-template-rows: 10vh 10vh 60vh 10vh 10vh;
+            }
+        }
+        @media (max-width: 385){
+            body{
+            display: grid;
+            background-color: black;
+            grid-gap: 1em;
+            grid-template-areas:
+            "cabeca"
+            "esquerdo" 
+            "principal"
+            "direito"
+            "rodape";
+            grid-template-columns: 1fr;
+            grid-template-rows: 10vh 10vh 60vh 10vh 10vh;
+            }
+            body .principal{
+                padding: 10px;
+            grid-area: principal;
+            background-color: grey;
+            font-size: 90%;
+            background-attachment: local;
+            }
+
+        }
+    </style>
+</head>
+<body>
+    <header class="cabeca"><h1>header</h1></header>
+    <div class="principal">
+        <main><h1>principal</h1><p>
+            <h1>Lorem Ipsum</h1>
+            <blockquote>"Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+                "Não há ninguém que ame a dor por si só, que a busque e queira tê-la, simplesmente por ser dor...""Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+    "Não há ninguém que ame a dor por si só, que a busque e queira tê-la, simplesmente por ser dor..."</blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean dapibus scelerisque venenatis. Suspendisse risus velit, pharetra et rhoncus ut, aliquet eget arcu. Nulla facilisi. Curabitur placerat enim non turpis feugiat maximus. Quisque pharetra suscipit ante, dapibus ornare sem dignissim ut. In suscipit justo tincidunt, viverra nulla at, cursus tortor. Maecenas at dolor id augue placerat viverra vel eget odio. Cras at pretium erat. Pellentesque sagittis lorem nec elit bibendum, vitae ornare eros suscipit. Maecenas congue augue et consectetur sagittis. Etiam sagittis aliquet magna, sed sagittis libero aliquet id.</p>
+        </p></main>
+    </div>
+    <aside class="esquerdo"><h3>esquerdo</h3></aside>
+    <aside class="direito"><h3>direito</h3></aside>
+    <footer class="rodape"><h4>rodape</h4></footer>
+    
+    
+</body>
+</html>
